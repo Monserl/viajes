@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificador de Viajes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    form {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      padding: 8px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #resultado {
+      white-space: pre-line;
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Planificador de Viajes</h1>
+  
+  <form id="form-viaje">
+    <label for="destino">Destino:</label>
+    <select id="destino" required>
+      <option value="">Seleccione...</option>
+      <option value="Paris">París</option>
+      <option value="Londres">Londres</option>
+      <option value="New York">Nueva York</option>
+      <option value="Tokio">Tokio</option>
+    </select>
+    
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" required>
+    
+    <label for="transporte">Transporte:</label>
+    <select id="transporte" required>
+      <option value="">Seleccione...</option>
+      <option value="Avión">Avión</option>
+      <option value="Tren">Tren</option>
+      <option value="Autobús">Autobús</option>
+    </select>
+    
+    <button type="submit">Registrar Viaje</button>
+  </form>
+  
+  <h2>Itinerario</h2>
+  <div id="resultado"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
